@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7fa">
+    <title>WARP Random</title>
+    <link rel="icon" href="/static/cloud.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <main class="container">
+        <img class="logo" src="/static/logo.svg" alt="WARP Generator">
+
+        <section class="card">
+            <header class="card-header">
+                <img class="awg-icon" src="/static/awg.webp" alt="AmneziaWG">
+                <span class="card-title">AmneziaWG</span>
+            </header>
+
+            <div class="divider"></div>
+
+            <div class="field-row">
+                <label class="field-label" for="domain">Введите домен:</label>
+                <div class="quic-wrapper">
+                    <select class="quic-select" id="quicLevel" aria-label="QUIC level">
+                        <option value="0">Unoptimized (old)</option>
+                        <option value="1">Safe Reorder</option>
+                        <option value="2">+ Screw TLS Header</option>
+                        <option value="3">++ Cut Screwed</option>
+                        <option value="4" selected>+++ Cut Zeroes</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="domain-wrapper">
+                <input
+                    type="text"
+                    class="domain-input"
+                    id="domain"
+                    placeholder="www.google.com"
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button type="button" class="clear-btn" id="clearDomain" aria-label="Очистить">×</button>
+            </div>
+
+            <div class="panel" role="tablist">
+                <button type="button" class="panel-btn active" data-mode="auto" data-label="авто">авто</button>
+                <button type="button" class="panel-btn" data-mode="ip" data-label="ip">ip</button>
+                <button type="button" class="panel-btn" data-mode="domain" data-label="домен">домен</button>
+            </div>
+
+            <div class="ip-range-wrapper" id="ipRangeWrapper">
+                <div class="ip-range-inner">
+                    <select class="ip-range" id="ipRange" aria-label="IP диапазон"></select>
+                </div>
+            </div>
+
+            <button type="button" class="generate-btn" id="generateBtn">
+                <span class="btn-text">Сгенерировать</span>
+            </button>
+
+            <div class="status" id="status"></div>
+
+            <div class="divider"></div>
+
+            <div class="footer-link">
+                <a href="https://github.com/buzarini/warp-random" target="_blank" rel="noopener">Исходный код</a>
+            </div>
+        </section>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+</html>

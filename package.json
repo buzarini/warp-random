@@ -1,0 +1,17 @@
+{
+    "name": "warp-random",
+    "version": "1.0.0",
+    "description": "Cloudflare WARP config generator for AmneziaWG",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "express": "^5.2.1",
+        "node-fetch": "^2.7.0",
+        "tweetnacl": "^1.0.3"
+    },
+    "engines": {
+        "node": "24.x"
+    }
+}
